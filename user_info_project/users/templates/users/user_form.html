@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeta Invest</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/icon.webp' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="content">
+        <h1>Zeta Investga Xush Kelibsiz!</h1>
+
+
+    </div>
+
+    <div class="container">
+        <h1>BEPUL RO'YXATDAN O'TISH</h1>
+        <form method="post" action="{% url 'user_form' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.as_p }}
+            </div>
+            <button type="submit" class="submit-btn">ro'yxatdan o'tish</button>
+        </form>
+    </div>
+</body>
+</html>
